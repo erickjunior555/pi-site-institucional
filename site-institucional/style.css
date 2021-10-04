@@ -8,7 +8,7 @@
 .header{
     height: 100px;
     background-color: black;
-    border: aquamarine 5px solid;
+    border: purple 5px solid;
 }
 
 .container{
@@ -19,6 +19,7 @@
 
 .header .container {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
 
@@ -28,12 +29,11 @@
     display: flex;
     list-style: none;
     width: 35%;
-    background-color: black;
     justify-content: space-between;
 }
 
 .header h1{
-    color: aquamarine;
+    color: purple;
 
 }
 
@@ -49,4 +49,128 @@
 .navbar li a {
     text-decoration: none;
     color: goldenrod;
+}
+
+.banner {
+    display: flex;
+    height: 500px;
+    background-image: url('http://revistanews.com.br/wp-content/uploads/2018/01/vinho9.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.message {
+    margin-right: 250px;
+    width: 10%;
+    color: white;
+    font-size: 30px;
+}
+
+.message span {
+    color: red;
+    font-weight: bolder;
+    font-family: monospace;
+}
+
+.proposito{
+    height: 450px;
+    color: gray;
+}
+
+.proposito .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.proposito .container .mvv 
+div img {
+    height: 100px;
+    width: 100px;
+
+}
+
+.proposito .container .mvv {
+    width: 100%;
+    margin-top: 50px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.proposito .container h2{
+    padding: 25px;
+    background-color: white;
+    color: #E6005A;
+    border-radius: 25px;
+}
+
+.proposito .container .mvv div {
+    width: 25vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.proposito .container .mvv div h3 {
+    color: #E6005A;
+    font-weight: bolder;
+    margin: 25px 0;
+}
+
+.footer {
+    background-color: purple;
+    height: 100px;
+}
+
+.footer p {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner .formLogin {
+    background-color: gray;
+    height:350px ;
+    width:30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-around;
+    border-radius: 30px;
+    
+}
+.banner .formLogin h2 {
+    color: purple;
+}
+
+.banner .formLogin div {
+    flex-direction: column;
+}
+
+.banner .formLogin div span {
+    color: purple;
+}
+
+.banner .formLogin div input {
+    border: 2px solid purple;
+    border-radius: 10px;
+    padding: 10px;
+    
+}
+
+.banner .formLogin button {
+    border-radius: 15px;
+    color: white;
+    background-color: purple;
+    padding: 15px;
+    cursor: pointer;
 }
