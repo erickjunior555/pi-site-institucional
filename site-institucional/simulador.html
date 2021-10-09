@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Termo Vinhos</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<div class="header">
+   <div class="container">
+     <h1>Termo Vinhos</h1>
+     <ul class='navbar'>
+       <li><a href="inicio.html">Inicio</a></li>
+       <li class='active'>Simulador</li>
+       <li>|</li>
+       <li><a href="login.html">Login</a></li>
+       <li><a href="cadastro.html">Cadastro</a></li>
+     </ul>
+   </div>
+ </div>
+
+<body bgcolor="Black" id="bgcolor">
+
+    <div id="imagem">
+ <center>
+
+ <img onclick ="imagem_vinho()"
+ src="https://68.media.tumblr.com/60336053951f6a6a1efaa7274583f37c/tumblr_o8id3hNHie1sj1kafo1_500.gif">
+ <br>
+
+  <h1 class='style_h1'>TERMO VINHOS</h1>
+    </div>
+ </center>
+
+
+  <div id="vinho2" style="display: none;">
+  <center>
+
+  <img src="https://sonoma.vteximg.com.br/arquivos/wine-loading.gif?v=2021" style="width: 200px;">
+
+
+ <h1>
+ <span class='style_h1'>Produtos e Serviços: </span><br>
+ </h1>
+
+ <h2>* Visualização da condição do vinho dentro dos barris,
+    (temperatura) por meio de um sensor instalado pela nossa empresa.
+    <br>
+
+ </h2>  <br><br>
+
+  <button onclick="calculadora()"><h2>CALCULADORA FINANCEIRA</h2></button><br>
+
+  <h3>Contatos:(11)3655-0065 
+          <br>
+   TermoVinhos@gmail.com.br
+  </h3>
+
+</div>
+
+
+<div id="calculos" style="display: none;">
+    
+ <center>
+
+ <h1 class='style_h1'>Confira qual será o seu lucro!</h1>
+
+ </center> 
+
+ </h2>
+
+ <span class='span1'>Quantos funcionarios responsaveis pelo controle de temperatura você tinha ?</span><br><input id="employees">
+ <br>
+ <span class='span1'>Qual era o salário mensal deles ?</span><br> <input id="wage"> <br> <br>
+
+
+ <button onclick="calculate()">Calcular</button> <br> <br>
+
+</div>
+    
+<div id="resultados_calculadora" style="color: rgb(58, 112, 4);display: none;">
+
+<div id="text"></div>
+      
+</div>
+
+<div class="footer">
+
+   <p>Termovinhos. Todos os direitos reservados © 2021</p>
+ 
+ </div>
+
+</body>
+</html>
+
+<script>
+
+function imagem_vinho(){
+
+ imagem.style.display                 ="none";
+ vinho2.style.display                 ="block";
+ resultados_calculadora.style.display = "none"
+ bgcolor.style.backgroundColor        = "rgb(238, 188, 203)";
+
+}
+
+function calculadora () {
+
+ vinho2.style.display                 = "none";
+ resultados_calculadora.style.display = "block"
+ bgcolor.style.backgroundColor        = "rgba(230, 160, 114, 0.808";
+ calculos.style.display               = "block";
+
+}
+
+function calculate () {
+
+var total = employees.value * wage.value
+var profit = total * 12
+
+if (employees.value == '' || wage.value == '') {
+     alert('Por favor, insira os valores')
+   
+} else {text.innerHTML = `Você teria uma economia de mão de obra de
+ <span class='span2'>R$${total.toFixed(2)} reais mensais</span>!<br><br>
+ o que anualmente, representa <span class='span2'>R$${profit} reais!!<br><br></span>
+ `
+}
+
+}
+
+
+</script>
